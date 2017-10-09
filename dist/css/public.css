@@ -1,0 +1,17 @@
+body {
+  position: fixed; }
+
+.clear:after {
+  content: '\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  *zoom: 1; }
+
+.center {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }

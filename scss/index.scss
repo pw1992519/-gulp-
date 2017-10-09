@@ -1,0 +1,55 @@
+@import 'public';
+.logo{
+    width: rem(400);
+    height: rem(400);
+    background: url(../img/logo.jpg) no-repeat;
+    background-size: 100% 100%; 
+    animation-iteration-count: infinite;
+    .word{
+        display: block;
+        text-align: center;
+        color: blueviolet;
+        font-weight: bold;
+        @include font-dpr(20px);
+    }
+}
+
+
+
+// 特殊机型的适配
+/*!* iphone4 *!*/
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2) {
+       
+}
+/*!* iphone5 *!*/
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
+    
+}
+/*!* iphoneplus *!*/
+@media only screen and (min-device-width:414px) and (-webkit-device-pixel-ratio: 3){
+    
+        
+   }
+/*!* ipad *!*/
+@media only screen and (min-device-width:768px){
+       
+}
+
+/*!* ipadpro *!*/
+@media only screen and (min-device-width:1024px){
+     
+      
+}
+/* 华为Mate 9 */
+@media screen
+and (device-width: 360px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 3) {
+    
+    
+}
+/*魅族*/
+@media only screen and (min-device-width :1080px) and (-webkit-min-device-pixel-ratio : 2.5){
+    
+
+}

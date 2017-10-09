@@ -1,0 +1,31 @@
+// 需要定义的常量 根据设计稿的宽度除以10而得来
+$baseFontSize: 75;
+// 去除手机端body移动默认事件
+body{
+    position: fixed;
+}
+// 清除浮动类名
+.clear:after{content:'\0020';display:block;height:0;clear:both;*zoom:1}
+// 不同dpr的字体大小处理
+@mixin font-dpr($font-size){
+    font-size: $font-size;
+    [data-dpr="2"] & {
+       font-size: $font-size * 2; 
+    }
+    [data-dpr="3"] & {
+       font-size: $font-size * 3; 
+    }    
+}  
+// px换算rem公式
+@function rem($px) {
+    @return $px / $baseFontSize * 1rem;
+  } 
+// 绝对定位中心
+.center{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
